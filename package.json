@@ -4,7 +4,8 @@
   "author": "Cleber Henrique",
   "version": "0.0.1",
   "scripts": {
-    "prepare-env": "solidarity && pnpm install && pnpm husky:install",
+    "prepare-env": "bash ./scripts/prepare-env.sh",
+    "solidarity": "solidarity",
     "build": "turbo build",
     "dev": "turbo dev",
     "lint": "bash ./scripts/repo-lint.sh",
