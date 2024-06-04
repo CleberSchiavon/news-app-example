@@ -56,15 +56,15 @@
         },
         {
           "type": "docs",
-          "section": "Documentation"
+          "section": "Documentação"
         },
         {
           "type": "perf",
-          "section": "Performance Improvements"
+          "section": "Melhoria de Perfomance"
         },
         {
           "type": "refac",
-          "section": "Refactorings"
+          "section": "Refatorações"
         },
         {
           "type": "revert",
