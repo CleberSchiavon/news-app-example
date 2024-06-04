@@ -2,13 +2,15 @@
   "name": "news-app-example",
   "private": true,
   "author": "Cleber Henrique",
+  "version": "0.0.1",
   "scripts": {
     "build": "turbo build",
     "dev": "turbo dev",
     "lint": "turbo lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "audit:branch": "bash ./scripts/branch-audit.sh",
-    "husky:install": "bash ./scripts/husky.sh"
+    "husky:install": "bash ./scripts/husky.sh",
+    "changelog": "standard-version"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
@@ -18,6 +20,7 @@
     "husky": "^8.0.3",
     "prettier": "^3.2.5",
     "validate-branch-name": "^1.3.0",
+    "standard-version": "^9.5.0",
     "turbo": "latest"
   },
   "standard-version": {
