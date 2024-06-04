@@ -5,6 +5,7 @@ echo "INSTALLING HUSKY..."
 
 rm -fr .husky
 pnpm husky install
+pnpm husky add .husky/pre-commit "pnpm run audit:branch"
 pnpm husky add .husky/pre-push "pnpm run lint && pnpm run changelog"
 pnpm husky add .husky/commit-msg "npx commitlint --edit $1"
 
