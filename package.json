@@ -7,7 +7,7 @@
     "prepare-env": "solidarity && pnpm install && pnpm husky:install",
     "build": "turbo build",
     "dev": "turbo dev",
-    "lint": "turbo lint",
+    "lint": "bash ./scripts/repo-lint.sh",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "audit:branch": "bash ./scripts/branch-audit.sh",
     "husky:install": "bash ./scripts/husky.sh",
@@ -20,7 +20,9 @@
     "@repo/typescript-config": "workspace:*",
     "husky": "^8.0.3",
     "prettier": "^3.2.5",
+    "eslint": "^8.40.0",
     "standard-version": "^9.5.0",
+    "lint-staged": "^13.2.2",
     "turbo": "latest",
     "validate-branch-name": "^1.3.0"
   },
