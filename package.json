@@ -1,17 +1,76 @@
 {
   "name": "news-app-example",
   "private": true,
+  "author": "Cleber Henrique",
   "scripts": {
     "build": "turbo build",
     "dev": "turbo dev",
     "lint": "turbo lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "husky:install": "bash ./scripts/husky.sh"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
+    "@commitlint/cli": "^17.6.3",
+    "@commitlint/config-conventional": "^17.6.3",
+    "husky": "^8.0.3",
     "prettier": "^3.2.5",
     "turbo": "latest"
+  },
+  "standard-version": {
+    "standard-version": {
+      "types": [
+        {
+          "type": "rc",
+          "section": "Release"
+        },
+        {
+          "type": "feat",
+          "section": "Features"
+        },
+        {
+          "type": "fix",
+          "section": "Bug Fixes"
+        },
+        {
+          "type": "hotfix",
+          "section": "Bug Fixes"
+        },
+        {
+          "type": "ci",
+          "section": "CI"
+        },
+        {
+          "type": "chore",
+          "section": "Chores"
+        },
+        {
+          "type": "style",
+          "section": "Styles"
+        },
+        {
+          "type": "docs",
+          "section": "Documentation"
+        },
+        {
+          "type": "perf",
+          "section": "Performance Improvements"
+        },
+        {
+          "type": "refac",
+          "section": "Refactorings"
+        },
+        {
+          "type": "revert",
+          "section": "Reversal"
+        },
+        {
+          "type": "test",
+          "section": "Tests"
+        }
+      ]
+    }
   },
   "packageManager": "pnpm@8.9.0",
   "engines": {
