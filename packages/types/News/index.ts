@@ -1,4 +1,4 @@
-import { NewsType, News } from "./News";
+import { News, NewsType } from "./News";
 
 export { NewsType };
 export type { News };

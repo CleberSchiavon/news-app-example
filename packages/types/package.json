@@ -2,9 +2,7 @@
   "name": "@repo/types",
   "version": "0.0.0",
   "author": "Cleber Henrique",
-  "main": "index.ts",
   "license": "MIT",
-  "type": "module",
   "scripts": {
     "lint": "eslint \"**/*.ts*\""
   },
