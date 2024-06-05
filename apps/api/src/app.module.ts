@@ -6,6 +6,8 @@ import environmentConfig from './config/environment.config';
 import { NewsController } from './modules/news/news.controller';
 import { NewsService } from './modules/news/news.service';
 import { HTTPLoggerInterceptor } from './middlewares/http.logger.middleware';
+import { HealthController } from './modules/health/health.controller';
+import { HealthService } from './modules/health/health.service';
 @Module({
   imports: [
     ConfigModule.forRoot({
@@ -14,8 +16,8 @@ import { HTTPLoggerInterceptor } from './middlewares/http.logger.middleware';
       isGlobal: true,
     }),
   ],
-  controllers: [AppController, NewsController],
-  providers: [AppService, NewsService],
+  controllers: [AppController, NewsController, HealthController],
+  providers: [AppService, NewsService, HealthService],
 })
 export class AppModule implements NestModule {
   configure(consumer: MiddlewareConsumer) {
