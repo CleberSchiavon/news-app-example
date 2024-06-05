@@ -38,30 +38,79 @@ Esse repositório contém
 - TypeScript
 - PNPM
 - DotEnv
+- Swagger
 - Jest and Supertest
 - Prettier and Eslint
 - Husky with Conventional Commits
 - Standard Version
 - Editor Config
+- Class Validations (DTO's)
 
 ## Dev Features
 
-- 📈 Absolute Import and Path Alias — Uma alternativa do typescript pra importar arquivos sem precisar de "../../", ao invés disso usamos "@/(pasta)"
+- 📈 Absolute Import and Path Alias — Uma alternativa do typescript pra importar arquivos sem precisar de "../../", ao invés disso usamos "~/(pasta)"
 - 📏 ESLint — O ESLint serve pra procurar problemas de escrita dentro do código (pode ser personalizado conforme as vontades do usuário)
 - 💖 Prettier and Eslint — Formata o código automaticamente com os padrões definidos do usuário
 - 🐶 Husky, Lint Staged — Serve pra rodar uma série de scripts nos arquivos prestes a commitar ou a subir
 - 🤖 Conventional Commit Lint — Serve pra conferir se os commits estão sendo feitos usando Conventional Commit (https://www.conventionalcommits.org/en/v1.0.0/)
 - ⏰ Standard Version — Gera um changelog automatico a cada build, mostrando todas as mudanças que foram feitas
+- 🟢 Swagger - Todos os endpoints estão documentados no swagger (path: "/swagger")
 - TurboRepo - Gestão inteligente de todo o repositório
 
 ## Comandos Uteis
 
 Esse repositório contém vários comandos uteis na Raiz do projeto, para acelerar todo o processo de desenvolvimento
 
+## Rotas da API
+
+As rotas da API podem ser conferidas abaixo, pela rota /swagger no navegador, ou pela collection que está compartilhada na Raiz do Projeto
+
+### News
+
+#### GET /news
+
+- Recupera todas as noticias
+- Resposta: 200 OK com todas as noticias
+
+#### GET /news/main
+
+- Recupera todas as noticias principais
+- Resposta: 200 OK com todas as noticias principais
+
+#### GET /news/secondary
+
+- Recupera todas as noticias secundárias
+- Resposta: 200 OK com todas as noticias secundárias
+
+#### GET /news/:id
+
+- Recupera uma noticia especifica
+- Resposta: 200 OK com a noticia especifica
+
+### Health
+
+#### GET /
+
+- Retorna o estado da API
+- Resposta: 200 OK com uma mensagem de Hello World
+
+#### GET /health
+
+- Retorna o estado da API
+- Resposta: 200 OK com uma mensagem de Hello World
+
 ### Comandos do Repositório
 
 ```sh
 pnpm run dev # Rodar o Front-End e o backend de forma simultânea, cada um em uma porta
+```
+
+```sh
+pnpm run dev # Rodar o Front-End e o backend de forma simultânea, cada um em uma porta
+```
+
+```sh
+pnpm run test # Rodar todos os testes do Repositório
 ```
 
 ```sh
@@ -78,6 +127,20 @@ pnpm run lint # Roda o ESLint e o prettier em todo o projeto
 
 ```sh
 pnpm run changelog # Gera um arquivo de CHANGELOG baseado na arvore de commits
+```
+
+### Comandos da API
+
+```sh
+pnpm run api:dev # Rodar APENAS a API em modo de desenvolvimento
+```
+
+```sh
+pnpm run api:test # Rodar todos os testes da API
+```
+
+```sh
+pnpm run api:test-watch # Rodar todos os testes da API no modo Watch do Jest
 ```
 
 ## Autor

@@ -1,0 +1,80 @@
+{
+	"info": {
+		"_postman_id": "a81781d7-ae53-45e8-90ff-53f36a7bb63e",
+		"name": "News App",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Return Main News",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{API_URL}}/news/main",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"news",
+						"main"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Return Secondary News Copy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{API_URL}}/news/secondary",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"news",
+						"secondary"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Return all News Copy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{API_URL}}/news",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"news"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Return specific news",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{API_URL}}/news/16a2a992-3762-4fbe-a5d2-9d00e1172f71",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"news",
+						"16a2a992-3762-4fbe-a5d2-9d00e1172f71"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
