@@ -2,7 +2,7 @@
   "types": [
     {
       "type": "build",
-      "section": ":rocket: Build System",
+      "section": "Build System",
       "hidden": false
     },
     {
@@ -12,47 +12,47 @@
     },
     {
       "type": "chore",
-      "section": ":triangular_flag_on_post: Outros",
+      "section": "Outros",
       "hidden": false
     },
     {
       "type": "docs",
-      "section": ":memo: Documentação",
+      "section": "Documentação",
       "hidden": false
     },
     {
       "type": "feat",
-      "section": ":sparkles: Features",
+      "section": "Features",
       "hidden": false
     },
     {
       "type": "fix",
-      "section": ":bug: Bug Fixes",
+      "section": "Bug Fixes",
       "hidden": false
     },
     {
       "type": "perf",
-      "section": ":zap: PMelhoras de Perfomance",
+      "section": "Melhorias de Perfomance",
       "hidden": false
     },
     {
       "type": "refactor",
-      "section": ":recycle: Code Refac",
+      "section": "Code Refac",
       "hidden": false
     },
     {
       "type": "revert",
-      "section": ":fire: Reverts",
+      "section": "Reverts",
       "hidden": false
     },
     {
       "type": "style",
-      "section": ":art: Styling",
+      "section": "Styling",
       "hidden": false
     },
     {
       "type": "test",
-      "section": ":white_check_mark: Tests",
+      "section": "Tests",
       "hidden": false
     }
   ]
