@@ -4,36 +4,33 @@
     ".env"
   ],
   "pipeline": {
-    "dev": {
-      "dotEnv": [
-        ".env"
-      ],
-      "cache": false,
-      "persistent": true
-    },
     "build": {
       "dependsOn": [
         "^build"
       ],
-      "dotEnv": [
-        ".env"
-      ],
       "outputs": [
-        "dist/**",
-        ".next/**",
-        "!.next/cache/**"
+        "dist/**"
       ]
     },
-    "lint": {
+    "clean": {
+      "cache": false
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true
+    },
+    "start": {
       "dependsOn": [
-        "^lint"
-      ]
+        "^build"
+      ],
+      "persistent": true
     },
     "test": {
-      "dependsOn": []
+      "cache": false
     },
     "test:watch": {
-      "dependsOn": []
+      "cache": false,
+      "persistent": true
     }
   }
 }
