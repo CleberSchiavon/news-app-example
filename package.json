@@ -15,6 +15,7 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "audit:branch": "bash ./scripts/branch-audit.sh",
     "husky:install": "bash ./scripts/husky.sh",
+    "clean-repo": "bash ./scripts/clean-repo.sh",
     "changelog": "standard-version"
   },
   "devDependencies": {
