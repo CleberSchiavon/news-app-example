@@ -41,6 +41,9 @@
       "dependsOn": [
         "^lint"
       ]
+    },
+    "storybook": {
+      "cache": false
     }
   }
 }

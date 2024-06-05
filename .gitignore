@@ -331,3 +331,4 @@ reports
 #Terraform
 terraform/.terraform
 terraform/.terraform.lock.hcl
+*storybook.log
