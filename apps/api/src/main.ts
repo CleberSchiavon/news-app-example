@@ -4,9 +4,12 @@ import { ConfigService } from '@nestjs/config';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 import { AppLogger } from './shared/utils/AppLogger';
 import { LoggerReturn, LoggerTypes } from './types/Http/Logger';
+import { ValidationPipe } from '@nestjs/common';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
+  const configService = app.get(ConfigService);
+  const apiPort = configService.get<number>('port');
 
   const swaggerConfig = new DocumentBuilder()
     .setTitle('News Api Swagger')
@@ -21,9 +24,8 @@ async function bootstrap() {
   const document = SwaggerModule.createDocument(app, swaggerConfig);
   SwaggerModule.setup('swagger', app, document);
 
+  app.useGlobalPipes(new ValidationPipe());
   app.enableCors();
-  const configService = app.get(ConfigService);
-  const apiPort = configService.get<number>('port');
   await app
     .listen(apiPort || 3002)
     .then(() =>
