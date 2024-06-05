@@ -3,6 +3,8 @@ import { AppController } from './app.controller';
 import { ConfigModule } from '@nestjs/config';
 import { AppService } from './app.service';
 import environmentConfig from './config/environment.config';
+import { NewsController } from './modules/news/news.controller';
+import { NewsService } from './modules/news/news.service';
 @Module({
   imports: [
     ConfigModule.forRoot({
@@ -11,7 +13,7 @@ import environmentConfig from './config/environment.config';
       isGlobal: true,
     }),
   ],
-  controllers: [AppController],
-  providers: [AppService],
+  controllers: [AppController, NewsController],
+  providers: [AppService, NewsService],
 })
 export class AppModule {}
