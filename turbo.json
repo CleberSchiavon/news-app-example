@@ -1,10 +1,21 @@
 {
   "$schema": "https://turbo.build/schema.json",
-  "globalDotEnv": [".env"],
+  "globalDotEnv": [
+    ".env"
+  ],
   "pipeline": {
     "build": {
-      "dependsOn": ["^build"],
-      "outputs": ["dist/**"]
+      "dependsOn": [
+        "^build"
+      ],
+      "dotEnv": [
+        ".env"
+      ],
+      "outputs": [
+        "dist/**",
+        ".next/**",
+        "!.next/cache/**"
+      ]
     },
     "clean": {
       "cache": false
@@ -14,7 +25,9 @@
       "persistent": true
     },
     "start": {
-      "dependsOn": ["^build"],
+      "dependsOn": [
+        "^build"
+      ],
       "persistent": true
     },
     "test": {
@@ -23,6 +36,11 @@
     "test:watch": {
       "cache": false,
       "persistent": true
+    },
+    "lint": {
+      "dependsOn": [
+        "^lint"
+      ]
     }
   }
 }

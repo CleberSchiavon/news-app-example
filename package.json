@@ -1,9 +1,13 @@
 {
-  "name": "news-app-example",
+  "name": "news-main",
   "private": true,
   "author": "Cleber Henrique",
   "version": "1.0.1",
   "scripts": {
+    "front:start": "dotenv -- turbo run start --filter=./apps/web/",
+    "front:build": "dotenv -- turbo run build --filter=./apps/web/",
+    "front:lint": "dotenv -- turbo run lint --filter=./apps/web/",
+    "front:dev": "dotenv -- turbo run dev --filter=./apps/web/",
     "api:dev": "dotenv -- turbo run dev --filter=./apps/api/",
     "api:test": "dotenv -- turbo run test --filter=./apps/api/",
     "api:test-watch": "dotenv -- turbo run test:watch --filter=./apps/api/",
