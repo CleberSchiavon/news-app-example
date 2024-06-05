@@ -1,7 +1,7 @@
-import { NewsMock } from '~/mocks/newsMock';
+import { NewsMock } from 'mocks/newsMock';
 import { NewsService } from './news.service';
 import { Test } from '@nestjs/testing';
-import { NewsType } from '@repo/types';
+import { NewsType } from 'types/News';
 
 describe('NewsService', () => {
   let newsService: NewsService;

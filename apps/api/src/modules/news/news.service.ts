@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
-import { News, NewsType } from '@repo/types';
-import { NewsMock } from '~/mocks/newsMock';
+import { News, NewsType } from 'types/News';
+import { NewsMock } from 'mocks/newsMock';
 
 @Injectable()
 export class NewsService {
@@ -20,7 +20,7 @@ export class NewsService {
     );
   }
 
-  async getSpecificNews(id: string): Promise<News> {
+  async getSpecificNews(id: string): Promise<News | undefined> {
     const news = await this.getAllNews().then((news) =>
       news.find((newsItem) => newsItem.id === id),
     );

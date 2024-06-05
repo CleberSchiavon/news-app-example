@@ -1,26 +1,21 @@
 import type { Config } from 'jest';
 
 const config: Config = {
-  rootDir: './',
-  roots: ['<rootDir>'],
   moduleFileExtensions: ['js', 'json', 'ts'],
+  rootDir: 'src',
   testRegex: '.*\\.spec\\.ts$',
   transform: {
-    '.+\\.ts$': [
-      'ts-jest',
-      {
-        isolatedModules: true,
-      },
-    ],
+    '^.+\\.(t|j)s$': 'ts-jest',
   },
-  moduleNameMapper: {
-    '~/(.*)': '<rootDir>/src/$1',
-  },
-  modulePathIgnorePatterns: ['<rootDir>/dist'],
-  testTimeout: 30000,
-  collectCoverageFrom: ['**/*.(t|j)s'],
-  coverageDirectory: './coverage',
   testEnvironment: 'node',
+  moduleNameMapper: {
+    '^~/(.*)$': '<rootDir>/$1',
+    '^config/(.*)$': '<rootDir>/config/$1',
+    '^mocks/(.*)$': '<rootDir>/modules/$1',
+    '^modules/(.*)$': '<rootDir>/modules/$1',
+    '^shared/(.*)$': '<rootDir>/shared/$1',
+    '^types/(.*)$': '<rootDir>/types/$1',
+  },
 };
 
 export default config;

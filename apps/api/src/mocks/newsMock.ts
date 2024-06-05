@@ -1,4 +1,4 @@
-import { News, NewsType } from '@repo/types';
+import { News, NewsType } from 'types/News';
 
 export const NewsMock: News[] = [
   {
