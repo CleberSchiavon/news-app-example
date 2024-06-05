@@ -1,21 +1,31 @@
 import type { Config } from 'jest';
 
 const config: Config = {
+  rootDir: './',
+  roots: ['<rootDir>'],
   moduleFileExtensions: ['js', 'json', 'ts'],
-  rootDir: 'src',
   testRegex: '.*\\.spec\\.ts$',
   transform: {
-    '^.+\\.(t|j)s$': 'ts-jest',
+    '.+\\.ts$': [
+      'ts-jest',
+      {
+        isolatedModules: true,
+      },
+    ],
   },
-  testEnvironment: 'node',
   moduleNameMapper: {
-    '^~/(.*)$': '<rootDir>/$1',
-    '^config/(.*)$': '<rootDir>/config/$1',
-    '^mocks/(.*)$': '<rootDir>/modules/$1',
-    '^modules/(.*)$': '<rootDir>/modules/$1',
-    '^shared/(.*)$': '<rootDir>/shared/$1',
-    '^types/(.*)$': '<rootDir>/types/$1',
+    '^~/(.*)$': '<rootDir>/src/$1',
+    '^config/(.*)$': '<rootDir>/src/config/$1',
+    '^mocks/(.*)$': '<rootDir>/src/mocks/$1',
+    '^modules/(.*)$': '<rootDir>/src/modules/$1',
+    '^shared/(.*)$': '<rootDir>/src/shared/$1',
+    '^types/(.*)$': '<rootDir>/src/types/$1',
   },
+  modulePathIgnorePatterns: ['<rootDir>/dist'],
+  testTimeout: 30000,
+  collectCoverageFrom: ['**/*.(t|j)s'],
+  coverageDirectory: '../coverage',
+  testEnvironment: 'node',
 };
 
 export default config;
