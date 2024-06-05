@@ -7,6 +7,7 @@
     "api:dev": "dotenv -- turbo run dev --filter=./apps/api/",
     "api:test": "dotenv -- turbo run test --filter=./apps/api/",
     "api:test-watch": "dotenv -- turbo run test:watch --filter=./apps/api/",
+    "test": "dotenv -- turbo run test",
     "prepare-env": "bash ./scripts/prepare-env.sh",
     "solidarity": "solidarity",
     "build": "turbo build",
