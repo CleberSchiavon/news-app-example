@@ -1,4 +1,4 @@
-import { HttpStatus, Injectable } from '@nestjs/common'
+import { HttpStatus, Injectable } from '@nestjs/common';
 
 @Injectable()
 export class HealthService {
@@ -6,6 +6,6 @@ export class HealthService {
     return {
       statusCode: HttpStatus.OK,
       message: 'Hello World!',
-    }
+    };
   }
 }

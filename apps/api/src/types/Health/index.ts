@@ -1,8 +1,8 @@
-import { ApiProperty } from '@nestjs/swagger'
+import { ApiProperty } from '@nestjs/swagger';
 
 export class HealthReturnType {
   @ApiProperty({ example: 200 })
-  statusCode: number
+  statusCode: number;
   @ApiProperty({ example: 'Hello World!' })
-  message: string
+  message: string;
 }
