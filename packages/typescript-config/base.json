@@ -1,39 +1,31 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
-  "display": "Default",
   "compilerOptions": {
-    "declaration": true,
-    "declarationMap": true,
+    "allowJs": true,
     "esModuleInterop": true,
-    "incremental": false,
+    "forceConsistentCasingInFileNames": true,
     "isolatedModules": true,
     "lib": [
-      "es2022",
-      "DOM",
-      "DOM.Iterable"
+      "ES2022"
     ],
-    "module": "NodeNext",
+    "module": "Preserve",
     "moduleDetection": "force",
-    "moduleResolution": "NodeNext",
+    "noEmit": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": true,
+    "noImplicitOverride": true,
     "noUncheckedIndexedAccess": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "strict": true,
-    "target": "ES2022",
-    "baseUrl": "./",
-    "paths": {
-      "apps/*": [
-        "apps/*"
-      ],
-      "api/*": [
-        "apps/api/*"
-      ],
-      "web/*": [
-        "app/web/*"
-      ],
-      "packages/*": [
-        "packages/*"
-      ]
-    }
-  }
+    "strictBindCallApply": true,
+    "strictNullChecks": true,
+    "target": "ES2022"
+  },
+  "exclude": [
+    "dist",
+    "node_modules"
+  ]
 }
