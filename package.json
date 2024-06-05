@@ -2,7 +2,7 @@
   "name": "news-app-example",
   "private": true,
   "author": "Cleber Henrique",
-  "version": "0.0.3",
+  "version": "1.0.1",
   "scripts": {
     "api:dev": "dotenv -- turbo run dev --filter=./apps/api/",
     "api:test": "dotenv -- turbo run test --filter=./apps/api/",
