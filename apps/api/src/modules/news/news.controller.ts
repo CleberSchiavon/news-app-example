@@ -7,6 +7,7 @@ import {
 } from '@nestjs/common';
 import { ApiResponse, ApiTags } from '@nestjs/swagger';
 import { NewsService } from './news.service';
+import { HttpResponseMessages } from '~/types/Http';
 
 @ApiTags('News')
 @Controller('news')
@@ -41,7 +42,10 @@ export class NewsController {
     if (news) {
       return news;
     } else {
-      throw new HttpException('News not found', HttpStatus.NOT_FOUND);
+      throw new HttpException(
+        HttpResponseMessages.NEWS_NOT_FOUND,
+        HttpStatus.NOT_FOUND,
+      );
     }
   }
 }
