@@ -1,4 +1,5 @@
-import { AdBanner, HeaderComponent } from "@repo/ui";
+import { AdBanner, HeaderComponent, Typography } from "@repo/ui";
+import './styles.scss'
 
 export default function Page(): JSX.Element {
   return (
@@ -6,9 +7,18 @@ export default function Page(): JSX.Element {
       <nav>
         <HeaderComponent navText="NEWS APP" />
       </nav>
-      <main>
+      <main className="container">
         <section id='ad-section'>
-          <AdBanner size="large" />
+          <AdBanner size="contain" />
+        </section>
+
+        <section id="primary-news-section" className="primary-news-container">
+          <div>
+            <div>
+              <Typography text="Categoria" type="category" />
+              <Typography text="Titulo da máteria aqui" type="title" />
+            </div>
+          </div>
         </section>
       </main>
     </>
