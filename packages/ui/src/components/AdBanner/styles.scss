@@ -1,0 +1,14 @@
+.main-banner {
+  display: flex;
+  background-color: #EBEFF1;
+  border-radius: 0.5rem;
+  width: 100%;
+  justify-content: center;
+  p {
+    font-family: "IBM Plex Sans", sans-serif;
+    color: gray;
+    line-height: 2.5rem;
+    font-size: 2rem;
+    font-weight: 700;
+  }
+}
