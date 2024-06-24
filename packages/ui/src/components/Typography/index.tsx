@@ -6,7 +6,14 @@ interface TypographyProps {
    * @param {string} type - Type of Typography
    *
    */
-  type: "title" | "heading2" | "body" | "category" | "date-text";
+  type:
+    | "title"
+    | "heading2"
+    | "body"
+    | "category"
+    | "date-text"
+    | "secondary-news-title"
+    | "base-article-title"
   /**
    * @param {string} text - Text of Typography
    *
@@ -20,12 +27,16 @@ const Typography: FC<TypographyProps> = ({ type = "title", text }) => {
       return <h1>{text}</h1>;
     case "heading2":
       return <h2>{text}</h2>;
+    case "secondary-news-title":
+      return <h3>{text}</h3>;
+      case "base-article-title":
+        return <h4>{text}</h4>
+    case "category":
+      return <h5>{text}</h5>;
+    case "date-text":
+      return <h6 className="date-text">{text}</h6>;
     case "body":
       return <p>{text}</p>;
-    case "date-text":
-      return <h5 className="date-text">{text}</h5>;
-    case "category":
-      return <h3>{text}</h3>;
     default:
       return null;
   }
