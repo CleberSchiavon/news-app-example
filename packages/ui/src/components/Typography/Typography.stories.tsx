@@ -1,7 +1,7 @@
-import React from 'react'
-import type { Meta, StoryObj } from '@storybook/react';
+import React from "react";
+import type { Meta, StoryObj } from "@storybook/react";
 
-import Typography from './index';
+import Typography from "./index";
 
 const meta: Meta<typeof Typography> = {
   title: "Components/Typography",
@@ -13,7 +13,6 @@ type Story = StoryObj<typeof Typography>;
 
 export const TypographyExample: Story = {
   args: {
-    text: 'Typography Component'
-},
+    text: "Typography Component",
+  },
 };
-

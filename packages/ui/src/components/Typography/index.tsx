@@ -13,7 +13,7 @@ interface TypographyProps {
     | "category"
     | "date-text"
     | "secondary-news-title"
-    | "base-article-title"
+    | "base-article-title";
   /**
    * @param {string} text - Text of Typography
    *
@@ -29,8 +29,8 @@ const Typography: FC<TypographyProps> = ({ type = "title", text }) => {
       return <h2>{text}</h2>;
     case "secondary-news-title":
       return <h3>{text}</h3>;
-      case "base-article-title":
-        return <h4>{text}</h4>
+    case "base-article-title":
+      return <h4>{text}</h4>;
     case "category":
       return <h5>{text}</h5>;
     case "date-text":

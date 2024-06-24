@@ -21,14 +21,18 @@ interface IAddBannerComponent {
   size?: "small" | "medium" | "large" | "contain";
 }
 
-export function AdBanner({ content, onClickBanner, size = "medium" }: IAddBannerComponent) {
+export function AdBanner({
+  content,
+  onClickBanner,
+  size = "medium",
+}: IAddBannerComponent) {
   const BannerContent = content;
   const bannerClass = `main-banner ${size}`;
 
   return (
     <aside
       className={bannerClass}
-      style={{ cursor: onClickBanner ? 'pointer' : 'auto' }}
+      style={{ cursor: onClickBanner ? "pointer" : "auto" }}
       onClick={onClickBanner}
     >
       {content ? BannerContent : <p>Publicidade</p>}

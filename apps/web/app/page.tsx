@@ -1,5 +1,5 @@
 import { AdBanner, HeaderComponent, Typography } from "@repo/ui";
-import './styles.scss'
+import "./styles.scss";
 
 export default function Page(): JSX.Element {
   return (
@@ -8,7 +8,7 @@ export default function Page(): JSX.Element {
         <HeaderComponent navText="NEWS APP" />
       </nav>
       <main className="container">
-        <section id='ad-section'>
+        <section id="ad-section">
           <AdBanner size="contain" />
         </section>
 

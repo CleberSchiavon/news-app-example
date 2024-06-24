@@ -4,12 +4,11 @@ All notable changes to this project will be documented in this file. See [standa
 
 ## [1.1.0](https://github.com/CleberSchiavon/news-app-example/compare/v1.0.1...v1.1.0) (2024-06-24)
 
-
 ### Features
 
-* **apps)(api:** adding initial frontend config ([ab963e8](https://github.com/CleberSchiavon/news-app-example/commit/ab963e8bb17671bcf0682c265351a8936cd90ad5))
-* **packages)(ui:** adding storybook and creating header component ([6157f51](https://github.com/CleberSchiavon/news-app-example/commit/6157f51453f9e629c4aa83037c4329ce189cfaee))
-* **ui:** creating ui package ([1c034a4](https://github.com/CleberSchiavon/news-app-example/commit/1c034a45d05dec1432847b48d5c91369cc8b56ff))
+- **apps)(api:** adding initial frontend config ([ab963e8](https://github.com/CleberSchiavon/news-app-example/commit/ab963e8bb17671bcf0682c265351a8936cd90ad5))
+- **packages)(ui:** adding storybook and creating header component ([6157f51](https://github.com/CleberSchiavon/news-app-example/commit/6157f51453f9e629c4aa83037c4329ce189cfaee))
+- **ui:** creating ui package ([1c034a4](https://github.com/CleberSchiavon/news-app-example/commit/1c034a45d05dec1432847b48d5c91369cc8b56ff))
 
 ### [1.0.1](///compare/v0.0.3...v1.0.1) (2024-06-05)
 
