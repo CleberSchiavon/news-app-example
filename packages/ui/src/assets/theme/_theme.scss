@@ -1,0 +1,78 @@
+// Define the colors
+$yellow: #FFBD14;
+$red: #FF2D2D;
+$blue: #24538B;
+$green: #248B28;
+
+// Define the typography
+$font-size-title: 3.75rem;
+$line-height-title: 1rem;
+
+$font-size-header: 0.75rem;
+$line-height-header: 1.2rem;
+
+$font-size-caption: 1.25rem;
+$line-height-caption: 1.3rem;
+
+$font-size-body: 1.2rem;
+$line-height-body: 1.2rem;
+
+$font-size-subtitle: 1.5rem;
+$line-height-subtitle: 1.2rem;
+
+$font-size-subtitle2: 1rem;
+$line-height-subtitle2: 1.2rem;
+
+$font-size-subtitle3: 0.750rem;
+$line-height-subtitle3: 1.2rem;
+
+body {
+  font-size: $font-size-body;
+  line-height: $line-height-body;
+}
+
+.title {
+  font-size: $font-size-title;
+  line-height: $line-height-title;
+}
+
+.header {
+  font-size: $font-size-header;
+  line-height: $line-height-header;
+}
+
+.caption {
+  font-size: $font-size-caption;
+  line-height: $line-height-caption;
+}
+
+.subheader {
+  font-size: $font-size-subtitle;
+  line-height: $line-height-subtitle;
+}
+
+.subheader2 {
+  font-size: $font-size-subtitle2;
+  line-height: $line-height-subtitle2;
+}
+
+.subheader3 {
+  font-size: $font-size-subtitle3;
+  line-height: $line-height-subtitle3;
+}
+
+.color-yellow {
+  color: $yellow;
+}
+
+.color-red {
+  color: $red;
+}
+
+.color-blue {
+  color: $blue;
+}
+
+.color-green {
+  color: $green;
+}

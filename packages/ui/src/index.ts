@@ -1,3 +1,4 @@
-import HeaderComponent from "./Header";
+import { HeaderComponent } from "./components/Header";
+import mediaQueries from "./assets/theme/foundations/mediaQueries";
 
-export {HeaderComponent}
+export { HeaderComponent, mediaQueries };
