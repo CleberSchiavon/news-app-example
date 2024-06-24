@@ -2,7 +2,7 @@
   "name": "news-app-main",
   "private": true,
   "author": "Cleber Henrique",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "scripts": {
     "ui:lint": "dotenv -- turbo run lint --filter=./packages/ui/",
     "ui:storybook": "dotenv -- turbo run storybook --filter=./packages/ui/",
