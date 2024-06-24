@@ -13,13 +13,22 @@ interface IAddBannerComponent {
    *
    */
   onClickBanner?: () => void | undefined;
+
+  /**
+   * @param {"small" | "medium" | "large" | "contain"} size - Size of the banner
+   *
+   */
+  size?: "small" | "medium" | "large" | "contain";
 }
-export function AdBanner({ content, onClickBanner }: IAddBannerComponent) {
+
+export function AdBanner({ content, onClickBanner, size = "medium" }: IAddBannerComponent) {
   const BannerContent = content;
+  const bannerClass = `main-banner ${size}`;
+
   return (
     <aside
-      className="main-banner"
-      style={{cursor: onClickBanner ? 'pointer' : 'auto'}}
+      className={bannerClass}
+      style={{ cursor: onClickBanner ? 'pointer' : 'auto' }}
       onClick={onClickBanner}
     >
       {content ? BannerContent : <p>Publicidade</p>}

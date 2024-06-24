@@ -1,4 +1,4 @@
-import { HeaderComponent } from "@repo/ui";
+import { AdBanner, HeaderComponent } from "@repo/ui";
 
 export default function Page(): JSX.Element {
   return (
@@ -8,9 +8,7 @@ export default function Page(): JSX.Element {
       </nav>
       <main>
         <section id='ad-section'>
-          <div>
-            <p>Publicidade</p>
-          </div>
+          <AdBanner size="large" />
         </section>
       </main>
     </>
